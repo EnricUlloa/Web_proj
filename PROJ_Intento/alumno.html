@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Prueba de proyecto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/indexalumno.css">
+
+  <!-- Aquests són els enllaços dels arxius de JS, que estan enllaçats al alumno.html. -->
+  <script src="js/indexalumno.js"></script>
+  <script src="js/exercici1alumno.js"></script>
+  <script src="js/exercici2alumno.js"></script>
+  <script src="js/exercici3alumno.js"></script>
+  <script src="js/exercici4alumno.js"></script>
+  <script src="js/exercici5alumno.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Note -->
+  <div class="header">
+    <a class="profile-icon" onclick="showExercise3alumno()">
+      <img src="imatge/iconoperfil.jpg" alt="Perfil de usuario">
+    </a>
+    <img src="imatge/logoinstic.png" alt="Logo Instic" class="logo">
+
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Bienvenido de vuelta!</h1>
+  </div>
+
+  <!-- Navigation Bar -->
+  <!-- Aquestes són les funcions que permeten que es puguin visualitzar els exercicis. -->
+  <div class="navbar">
+    <a onclick="showExercise0alumno()">Assistències</a>
+    <a onclick="showExercise1alumno()">Horari</a>
+    <a onclick="showExercise2alumno()">Seguiment</a>
+    <!--<a onclick="showExercise4alumno()">Exercici 4</a>-->
+    <!--<a onclick="showExercise5alumno()">Exercici 5</a>-->
+  </div>
+
+  <!-- INICI -->
+  <div class="row">
+    <div class="main">
+      <h2>Assistències</h2>
+      <div class="buttons">
+        <button>Absència Justificada</button>
+        <button>Absent</button>
+        <button>Retard</button>
+        <button>Present</button>
+        <button>Mostrar Tot</button>
+      </div>
+      <table class="attendance-table">
+        <thead>
+          <tr>
+            <th>Alumne</th>
+            <th>Grups</th>
+            <th>Aula</th>
+            <th>Data</th>
+            <th>Estat</th>
+            <th>Registrat per</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>08/11 16:30</td>
+            <td><span class="status present">Present</span></td>
+            <td>Montero, Hugo</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>08/11 15:30</td>
+            <td><span class="status present">Present</span></td>
+            <td>Montero, Hugo</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>04/11 19:00</td>
+            <td><span class="status justified">Absència Justificada</span></td>
+            <td>Hernández, Beatriz</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>04/11 18:00</td>
+            <td><span class="status justified">Absència Justificada</span></td>
+            <td>Hernández, Beatriz</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>21/10 14:30</td>
+            <td><span class="status absent">Absent</span></td>
+            <td>Gallardo, Manuel</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>18/10 15:30</td>
+            <td><span class="status absent">Absent</span></td>
+            <td>Gallardo, Manuel</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>17/10 16:30</td>
+            <td><span class="status retard">Retard</span></td>
+            <td>Leon, Cesar</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>17/10 16:30</td>
+            <td><span class="status retard">Retard</span></td>
+            <td>Leon, Cesar</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- EXERCICI 1-->
+  <div class="row">
+
+    <div class="main">
+      <h2>Horari</h2>
+      <p>Grup: DAW2B</p>
+      <table>
+        <tr>
+          <th>Hora</th>
+          <th>Dilluns</th>
+          <th>Dimarts</th>
+          <th>Dimecres</th>
+          <th>Dijous</th>
+          <th>Divendres</th>
+        </tr>
+        <tr>
+          <td>14:30 - 15:30</td>
+          <td class="a01">A01</td>
+          <td></td>
+          <td class="a01">A01</td>
+          <td class="a01">A01</td>
+          <td class="a01">A01</td>
+        </tr>
+        <tr>
+          <td>15:30 - 16:30</td>
+          <td class="a01">A01</td>
+          <td class="a01">A01</td>
+          <td class="a01">A01</td>
+          <td class="a01">A01</td>
+          <td class="a01">A01</td>
+        </tr>
+        <tr>
+          <td>16:30 - 17:30</td>
+          <td class="a02seis">A02</td>
+          <td class="a01eie">A01</td>
+          <td class="a02seis">A02</td>
+          <td class="a02tut">A02</td>
+          <td class="a02bio">A02</td>
+        </tr>
+        <tr>
+          <td>17:30 - 18:00</td>
+          <td>Descans</td>
+          <td>Descans</td>
+          <td>Descans</td>
+          <td>Descans</td>
+          <td>Descans</td>
+        </tr>
+        <tr>
+          <td>18:00 - 19:00</td>
+          <td class="a02m8">A02</td>
+          <td class="a01eie">A01</td>
+          <td class="a02seis">A02</td>
+          <td class="a02bio">A02</td>
+          <td class="a02seis">A02</td>
+        </tr>
+        <tr>
+          <td>19:00 - 20:00</td>
+          <td class="a02m8">A02</td>
+          <td></td>
+          <td class="a02m3">A02</td>
+          <td class="a02bio">A02</td>
+          <td class="a02seis">A02</td>
+        </tr>
+        <tr>
+          <td>20:00 - 21:00</td>
+          <td></td>
+          <td></td>
+          <td class="a02m3">A02</td>
+          <td></td>
+          <td class="a02seis">A02</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- EXERCICI 2 -->
+  <div class="row">
+
+    <div class="main">
+      <h2>Seguiment</h2>
+      <table class="attendance-table">
+        <thead>
+          <tr>
+            <th>Alumne</th>
+            <th>Grups</th>
+            <th>Aula</th>
+            <th>% d'asistencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>88%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- EXERCICI 3 -->
+  <div class="row">
+
+    <div class="main">
+      <h2>Dades personals</h2>
+      <div class="data-card">
+        <div class="profile-picture">
+          <img src="imatge/iconoperfil.jpg" alt="Profile Picture">
+        </div>
+        <div class="info">
+          <p><strong>Rol:</strong> Alumne</p>
+          <p><strong>Nom:</strong> Enric Ulloa Flores</p>
+          <p><strong>Grup:</strong> DAW2B</p>
+          <p><strong>Correo:</strong> 2024_enric.ulloa@iticbcn.cat</p>
+          <p><strong>RFID:</strong> 2135465770</p>
+        </div>
+      </div>
+      <button class="logout" onclick="location.href='login.html'">Tanca sessió</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>2024 © Institut TIC de Barcelona | <span><a class="enlace" href="http://">Condicions generals</a></span> | <span><a
+          class="enlace" href="http://">Ajuda</a></span> | <span><a class="enlace"
+          href="http://">Suggeriments</a></span></p>
+  </div>
+
+</body>
+
+</html>

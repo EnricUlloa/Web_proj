@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background: #fff;
+  padding: 20px; /* Espaciado uniforme dentro del contenedor */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 10px; /* Espaciado interno para los campos */
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Incluye padding y bordes en el ancho total */
+}
+
+button {
+  width: 100%; /* Botón del mismo ancho que los campos */
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  display: none;
+}
+
+.logo {
+  display: block; /* Centra la imagen horizontalmente */
+  margin: 0 auto 30px; /* Ajusta la distancia entre la imagen y el formulario (30px abajo) */
+  width: 250px; /* Tamaño más grande de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+}

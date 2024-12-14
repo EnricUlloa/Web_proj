@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Prueba de proyecto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/indexprofesor.css">
+
+  <!-- Aquests són els enllaços dels arxius de JS, que estan enllaçats al profesor.html. -->
+  <script src="js/indexprofesor.js"></script>
+  <script src="js/exercici1profesor.js"></script>
+  <script src="js/exercici2profesor.js"></script>
+  <script src="js/exercici3profesor.js"></script>
+  <script src="js/exercici4profesor.js"></script>
+  <script src="js/exercici5profesor.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Note -->
+  <div class="header">
+    <a class="profile-icon" onclick="showExercise3profesor()">
+      <img src="imatge/iconoperfil.jpg" alt="Perfil de usuario">
+    </a>
+    <img src="imatge/logoinstic.png" alt="Logo Instic" class="logo">
+
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Bienvenido de vuelta!</h1>
+  </div>
+
+  <!-- Navigation Bar -->
+  <!-- Aquestes són les funcions que permeten que es puguin visualitzar els exercicis. -->
+  <div class="navbar">
+    <a onclick="showExercise0profesor()">Assistències</a>
+    <a onclick="showExercise4profesor()">Llistat</a>
+    <a onclick="showExercise1profesor()">Horari</a>
+    <a onclick="showExercise2profesor()">Seguiment</a>
+    <!--<a onclick="showExercise5profesor()">Exercici 5</a>-->
+  </div>
+
+  <!-- INICI -->
+  <div class="row">
+    <div class="main">
+      <h2>Assistències</h2>
+
+      <!-- Sección de filtros -->
+      <div class="filter-section">
+        <label for="filter-group">Grup:</label>
+        <input type="text" id="filter-group" placeholder="">
+
+        <label for="filter-room">Aula:</label>
+        <input type="text" id="filter-room" placeholder="">
+
+        <button onclick="applyFilters()">Aplicar filtres</button>
+        <button onclick="clearFilters()">Netejar filtres</button>
+      </div>
+
+      <div class="buttons">
+        <button>Absència Justificada</button>
+        <button>Absent</button>
+        <button>Retard</button>
+        <button>Present</button>
+        <button>Mostrar Tot</button>
+      </div>
+      <table class="attendance-table">
+        <thead>
+          <tr>
+            <th>Alumne</th>
+            <th>Grups</th>
+            <th>Aula</th>
+            <th>Data</th>
+            <th>Estat</th>
+            <th>Registrat per</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>08/11 16:30</td>
+            <td><span class="status present">Present</span></td>
+            <td>Montero, Hugo</td>
+          </tr>
+          <tr>
+            <td>Rojas, Olga</td>
+            <td>DAW:2:A</td>
+            <td>A01</td>
+            <td>08/11 15:30</td>
+            <td><span class="status present">Present</span></td>
+            <td>Montero, Hugo</td>
+          </tr>
+          <tr>
+            <td>Santos, Inés</td>
+            <td>DAW:2:B</td>
+            <td>A03</td>
+            <td>04/11 19:00</td>
+            <td><span class="status justified">Absència Justificada</span></td>
+            <td>Hernández, Beatriz</td>
+          </tr>
+          <tr>
+            <td>Prieto, Felix</td>
+            <td>DAW:2:A</td>
+            <td>A04</td>
+            <td>04/11 18:00</td>
+            <td><span class="status justified">Absència Justificada</span></td>
+            <td>Hernández, Beatriz</td>
+          </tr>
+          <tr>
+            <td>Cortes, Hugo</td>
+            <td>DAW:2:B</td>
+            <td>A05</td>
+            <td>21/10 14:30</td>
+            <td><span class="status absent">Absent</span></td>
+            <td>Gallardo, Manuel</td>
+          </tr>
+          <tr>
+            <td>Molina, David</td>
+            <td>DAW:2:A</td>
+            <td>A01</td>
+            <td>18/10 15:30</td>
+            <td><span class="status absent">Absent</span></td>
+            <td>Gallardo, Manuel</td>
+          </tr>
+          <tr>
+            <td>Cristina Iglesias, María</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>17/10 16:30</td>
+            <td><span class="status retard">Retard</span></td>
+            <td>Leon, Cesar</td>
+          </tr>
+          <tr>
+            <td>Soto, Francisco</td>
+            <td>DAW:2:A</td>
+            <td>A03</td>
+            <td>17/10 16:30</td>
+            <td><span class="status retard">Retard</span></td>
+            <td>Leon, Cesar</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- EXERCICI 1-->
+  <div class="row">
+
+    <div class="main">
+      <h2>Horari</h2>
+      
+      <table>
+        <tr>
+          <th>Hora</th>
+          <th>Dilluns</th>
+          <th>Dimarts</th>
+          <th>Dimecres</th>
+          <th>Dijous</th>
+          <th>Divendres</th>
+        </tr>
+        <tr>
+          <td>14:30 - 15:30</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>15:30 - 16:30</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>16:30 - 17:30</td>
+          <td class="a02seis">A02 - DAW2B</td>
+          <td></td>
+          <td class="a02seis">A02 - DAW2B</td>
+          <td class="a02tut">A02 - DAW2B</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17:30 - 18:00</td>
+          <td>Descans</td>
+          <td>Descans</td>
+          <td>Descans</td>
+          <td>Descans</td>
+          <td>Descans</td>
+        </tr>
+        <tr>
+          <td>18:00 - 19:00</td>
+          <td></td>
+          <td></td>
+          <td class="a02seis">A02 - DAW2B</td>
+          <td></td>
+          <td class="a02seis">A02 - DAW2B</td>
+        </tr>
+        <tr>
+          <td>19:00 - 20:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="a02seis">A02 - DAW2B</td>
+        </tr>
+        <tr>
+          <td>20:00 - 21:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="a02seis">A02 - DAW2B</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- EXERCICI 2 -->
+  <div class="row">
+
+    <div class="main">
+      <h2>Seguiment</h2>
+
+      <!-- Sección de filtros -->
+      <div class="filter-section">
+        <label for="filter-group">Grup:</label>
+        <input type="text" id="filter-group" placeholder="">
+
+        <label for="filter-room">Aula:</label>
+        <input type="text" id="filter-room" placeholder="">
+
+        <button onclick="applyFilters()">Aplicar filtres</button>
+        <button onclick="clearFilters()">Netejar filtres</button>
+      </div>
+
+      <table class="attendance-table">
+        <thead>
+          <tr>
+            <th>Alumne</th>
+            <th>Grups</th>
+            <th>Aula</th>
+            <th>% d'asistencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:A</td>
+            <td>A01</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Gil, Alberto</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Soler, Raquel</td>
+            <td>DAW:2:A</td>
+            <td>A03</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Marin, Sofía</td>
+            <td>DAW:2:B</td>
+            <td>A04</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Muñoz, Laura</td>
+            <td>DAW:2:A</td>
+            <td>A05</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Fernandez, Lorena</td>
+            <td>DAW:2:B</td>
+            <td>A01</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Mendez, Lucia</td>
+            <td>DAW:2:A</td>
+            <td>A02</td>
+            <td>88%</td>
+          </tr>
+          <tr>
+            <td>Sanz, Inmaculada</td>
+            <td>DAW:2:B</td>
+            <td>A03</td>
+            <td>88%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- EXERCICI 3 -->
+  <div class="row">
+
+    <div class="main">
+      <h2>Dades personals</h2>
+      <div class="data-card">
+        <div class="profile-picture">
+          <img src="imatge/iconoperfil.jpg" alt="Profile Picture">
+        </div>
+        <div class="info">
+          <p><strong>Rol:</strong> Profesor</p>
+          <p><strong>Nom:</strong> Pedro Rodriguez Cruz</p>
+          <p><strong>Telefon:</strong> +34 343 323 312</p>
+          <p><strong>Correo:</strong> pedro.rodriguez@iticbcn.cat</p>
+          <p><strong>RFID:</strong> 32434563457</p>
+        </div>
+      </div>
+      <button class="logout" onclick="location.href='login.html'">Tanca sessió</button>
+    </div>
+  </div>
+
+  <!-- EXERCICI 4 -->
+  <div class="row">
+    
+    <div class="main">
+      <h2>Llistat</h2>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>2024 © Institut TIC de Barcelona | <span><a class="enlace" href="http://">Condicions generals</a></span> | <span><a
+          class="enlace" href="http://">Ajuda</a></span> | <span><a class="enlace"
+          href="http://">Suggeriments</a></span></p>
+  </div>
+
+</body>
+
+</html>
