@@ -50,3 +50,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function applyFilters() {
+    const groupInput = document.getElementById('filter-group').value.trim().toLowerCase();
+    const roomInput = document.getElementById('filter-room').value.trim().toLowerCase();
+    const rows = document.querySelectorAll('.attendance-table tbody tr');
+
+    rows.forEach(row => {
+      const group = row.cells[1].textContent.trim().toLowerCase();
+      const room = row.cells[2].textContent.trim().toLowerCase();
+
+      if ((groupInput === '' || group.includes(groupInput)) && (roomInput === '' || room.includes(roomInput))) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  function clearFilters() {
+    document.getElementById('filter-group').value = '';
+    document.getElementById('filter-room').value = '';
+    const rows = document.querySelectorAll('.attendance-table tbody tr');
+
+    rows.forEach(row => {
+      row.style.display = '';
+    });
+  }

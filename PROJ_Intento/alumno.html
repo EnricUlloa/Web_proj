@@ -40,9 +40,9 @@
   <!-- Navigation Bar -->
   <!-- Aquestes són les funcions que permeten que es puguin visualitzar els exercicis. -->
   <div class="navbar">
-    <a onclick="showExercise0alumno()">Assistències</a>
-    <a onclick="showExercise1alumno()">Horari</a>
-    <a onclick="showExercise2alumno()">Seguiment</a>
+    <a onclick="showExercise0alumno()">Asistencias</a>
+    <a onclick="showExercise1alumno()">Horario</a>
+    <a onclick="showExercise2alumno()">Seguimiento</a>
     <!--<a onclick="showExercise4alumno()">Exercici 4</a>-->
     <!--<a onclick="showExercise5alumno()">Exercici 5</a>-->
   </div>
@@ -50,23 +50,23 @@
   <!-- INICI -->
   <div class="row">
     <div class="main">
-      <h2>Assistències</h2>
+      <h2>Asistencias</h2>
       <div class="buttons">
-        <button>Absència Justificada</button>
-        <button>Absent</button>
-        <button>Retard</button>
-        <button>Present</button>
-        <button>Mostrar Tot</button>
+        <button>Ausencia Justificada</button>
+        <button>Ausente</button>
+        <button>Retraso</button>
+        <button>Presente</button>
+        <button>Mostrar Todo</button>
       </div>
       <table class="attendance-table">
         <thead>
           <tr>
-            <th>Alumne</th>
-            <th>Grups</th>
+            <th>Alumno</th>
+            <th>Grupo</th>
             <th>Aula</th>
-            <th>Data</th>
-            <th>Estat</th>
-            <th>Registrat per</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Registrado por</th>
           </tr>
         </thead>
         <tbody>
@@ -75,7 +75,7 @@
             <td>DAW:2:B</td>
             <td>A02</td>
             <td>08/11 16:30</td>
-            <td><span class="status present">Present</span></td>
+            <td><span class="status present">Presente</span></td>
             <td>Montero, Hugo</td>
           </tr>
           <tr>
@@ -83,7 +83,7 @@
             <td>DAW:2:B</td>
             <td>A02</td>
             <td>08/11 15:30</td>
-            <td><span class="status present">Present</span></td>
+            <td><span class="status present">Presente</span></td>
             <td>Montero, Hugo</td>
           </tr>
           <tr>
@@ -91,7 +91,7 @@
             <td>DAW:2:B</td>
             <td>A02</td>
             <td>04/11 19:00</td>
-            <td><span class="status justified">Absència Justificada</span></td>
+            <td><span class="status justified">Ausencia Justificada</span></td>
             <td>Hernández, Beatriz</td>
           </tr>
           <tr>
@@ -99,7 +99,7 @@
             <td>DAW:2:B</td>
             <td>A02</td>
             <td>04/11 18:00</td>
-            <td><span class="status justified">Absència Justificada</span></td>
+            <td><span class="status justified">Ausencia Justificada</span></td>
             <td>Hernández, Beatriz</td>
           </tr>
           <tr>
@@ -107,7 +107,7 @@
             <td>DAW:2:B</td>
             <td>A02</td>
             <td>21/10 14:30</td>
-            <td><span class="status absent">Absent</span></td>
+            <td><span class="status absent">Ausente</span></td>
             <td>Gallardo, Manuel</td>
           </tr>
           <tr>
@@ -115,7 +115,7 @@
             <td>DAW:2:B</td>
             <td>A02</td>
             <td>18/10 15:30</td>
-            <td><span class="status absent">Absent</span></td>
+            <td><span class="status absent">Ausente</span></td>
             <td>Gallardo, Manuel</td>
           </tr>
           <tr>
@@ -123,7 +123,7 @@
             <td>DAW:2:B</td>
             <td>A02</td>
             <td>17/10 16:30</td>
-            <td><span class="status retard">Retard</span></td>
+            <td><span class="status retard">Retraso</span></td>
             <td>Leon, Cesar</td>
           </tr>
           <tr>
@@ -131,7 +131,23 @@
             <td>DAW:2:B</td>
             <td>A02</td>
             <td>17/10 16:30</td>
-            <td><span class="status retard">Retard</span></td>
+            <td><span class="status retard">Retraso</span></td>
+            <td>Leon, Cesar</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A01</td>
+            <td>12/10 14:30</td>
+            <td><span class="status absent">Ausente</span></td>
+            <td>Leon, Cesar</td>
+          </tr>
+          <tr>
+            <td>Ulloa Flores, Enric</td>
+            <td>DAW:2:B</td>
+            <td>A01</td>
+            <td>13/10 14:30</td>
+            <td><span class="status retard">Retraso</span></td>
             <td>Leon, Cesar</td>
           </tr>
         </tbody>
@@ -144,16 +160,16 @@
   <div class="row">
 
     <div class="main">
-      <h2>Horari</h2>
-      <p>Grup: DAW2B</p>
+      <h2>Horario</h2>
+      <p>Grupo: DAW2B</p>
       <table>
         <tr>
           <th>Hora</th>
-          <th>Dilluns</th>
-          <th>Dimarts</th>
-          <th>Dimecres</th>
-          <th>Dijous</th>
-          <th>Divendres</th>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miércoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
         </tr>
         <tr>
           <td>14:30 - 15:30</td>
@@ -181,11 +197,11 @@
         </tr>
         <tr>
           <td>17:30 - 18:00</td>
-          <td>Descans</td>
-          <td>Descans</td>
-          <td>Descans</td>
-          <td>Descans</td>
-          <td>Descans</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
         </tr>
         <tr>
           <td>18:00 - 19:00</td>
@@ -219,14 +235,14 @@
   <div class="row">
 
     <div class="main">
-      <h2>Seguiment</h2>
+      <h2>Seguimiento</h2>
       <table class="attendance-table">
         <thead>
           <tr>
-            <th>Alumne</th>
-            <th>Grups</th>
+            <th>Alumno</th>
+            <th>Grupo</th>
             <th>Aula</th>
-            <th>% d'asistencia</th>
+            <th>% de asistencia</th>
           </tr>
         </thead>
         <tbody>
@@ -263,8 +279,8 @@
           <tr>
             <td>Ulloa Flores, Enric</td>
             <td>DAW:2:B</td>
-            <td>A02</td>
-            <td>88%</td>
+            <td>A01</td>
+            <td>66%</td>
           </tr>
           <tr>
             <td>Ulloa Flores, Enric</td>
@@ -275,8 +291,8 @@
           <tr>
             <td>Ulloa Flores, Enric</td>
             <td>DAW:2:B</td>
-            <td>A02</td>
-            <td>88%</td>
+            <td>A01</td>
+            <td>66%</td>
           </tr>
         </tbody>
       </table>
@@ -287,28 +303,28 @@
   <div class="row">
 
     <div class="main">
-      <h2>Dades personals</h2>
+      <h2>Datos personales</h2>
       <div class="data-card">
         <div class="profile-picture">
           <img src="imatge/iconoperfil.jpg" alt="Profile Picture">
         </div>
         <div class="info">
-          <p><strong>Rol:</strong> Alumne</p>
-          <p><strong>Nom:</strong> Enric Ulloa Flores</p>
-          <p><strong>Grup:</strong> DAW2B</p>
+          <p><strong>Rol:</strong> Alumno</p>
+          <p><strong>Nombre:</strong> Enric Ulloa Flores</p>
+          <p><strong>Grupo:</strong> DAW2B</p>
           <p><strong>Correo:</strong> 2024_enric.ulloa@iticbcn.cat</p>
           <p><strong>RFID:</strong> 2135465770</p>
         </div>
       </div>
-      <button class="logout" onclick="location.href='login.html'">Tanca sessió</button>
+      <button class="logout" onclick="location.href='login.html'">Cerrar sesión</button>
     </div>
   </div>
 
   <!-- Footer -->
   <div class="footer">
-    <p>2024 © Institut TIC de Barcelona | <span><a class="enlace" href="http://">Condicions generals</a></span> | <span><a
-          class="enlace" href="http://">Ajuda</a></span> | <span><a class="enlace"
-          href="http://">Suggeriments</a></span></p>
+    <p>2024 © Institut TIC de Barcelona | <span><a class="enlace" href="http://">Condiciones generales</a></span> | <span><a
+          class="enlace" href="http://">Ayuda</a></span> | <span><a class="enlace"
+          href="http://">Sugerencias</a></span></p>
   </div>
 
 </body>

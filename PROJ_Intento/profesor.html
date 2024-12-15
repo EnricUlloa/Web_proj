@@ -40,46 +40,46 @@
   <!-- Navigation Bar -->
   <!-- Aquestes són les funcions que permeten que es puguin visualitzar els exercicis. -->
   <div class="navbar">
-    <a onclick="showExercise0profesor()">Assistències</a>
-    <a onclick="showExercise4profesor()">Llistat</a>
-    <a onclick="showExercise1profesor()">Horari</a>
-    <a onclick="showExercise2profesor()">Seguiment</a>
+    <a onclick="showExercise0profesor()">Asistencias</a>
+    <a onclick="showExercise4profesor()">Listado</a>
+    <a onclick="showExercise1profesor()">Horario</a>
+    <a onclick="showExercise2profesor()">Seguimiento</a>
     <!--<a onclick="showExercise5profesor()">Exercici 5</a>-->
   </div>
 
   <!-- INICI -->
   <div class="row">
     <div class="main">
-      <h2>Assistències</h2>
+      <h2>Asistencias</h2>
 
       <!-- Sección de filtros -->
       <div class="filter-section">
-        <label for="filter-group">Grup:</label>
+        <label for="filter-group">Grupo:</label>
         <input type="text" id="filter-group" placeholder="">
 
         <label for="filter-room">Aula:</label>
         <input type="text" id="filter-room" placeholder="">
 
-        <button onclick="applyFilters()">Aplicar filtres</button>
-        <button onclick="clearFilters()">Netejar filtres</button>
+        <button onclick="applyFilters()">Aplicar filtros</button>
+        <button onclick="clearFilters()">Limpiar filtros</button>
       </div>
 
       <div class="buttons">
-        <button>Absència Justificada</button>
-        <button>Absent</button>
-        <button>Retard</button>
-        <button>Present</button>
-        <button>Mostrar Tot</button>
+        <button>Ausencia Justificada</button>
+        <button>Ausente</button>
+        <button>Retraso</button>
+        <button>Presente</button>
+        <button>Mostrar Todo</button>
       </div>
       <table class="attendance-table">
         <thead>
           <tr>
-            <th>Alumne</th>
-            <th>Grups</th>
+            <th>Alumno</th>
+            <th>Grupo</th>
             <th>Aula</th>
-            <th>Data</th>
-            <th>Estat</th>
-            <th>Registrat per</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Registrado por</th>
           </tr>
         </thead>
         <tbody>
@@ -88,7 +88,7 @@
             <td>DAW:2:B</td>
             <td>A02</td>
             <td>08/11 16:30</td>
-            <td><span class="status present">Present</span></td>
+            <td><span class="status present">Presente</span></td>
             <td>Montero, Hugo</td>
           </tr>
           <tr>
@@ -96,7 +96,7 @@
             <td>DAW:2:A</td>
             <td>A01</td>
             <td>08/11 15:30</td>
-            <td><span class="status present">Present</span></td>
+            <td><span class="status present">Presente</span></td>
             <td>Montero, Hugo</td>
           </tr>
           <tr>
@@ -104,7 +104,7 @@
             <td>DAW:2:B</td>
             <td>A03</td>
             <td>04/11 19:00</td>
-            <td><span class="status justified">Absència Justificada</span></td>
+            <td><span class="status justified">Ausencia Justificada</span></td>
             <td>Hernández, Beatriz</td>
           </tr>
           <tr>
@@ -112,7 +112,7 @@
             <td>DAW:2:A</td>
             <td>A04</td>
             <td>04/11 18:00</td>
-            <td><span class="status justified">Absència Justificada</span></td>
+            <td><span class="status justified">Ausencia Justificada</span></td>
             <td>Hernández, Beatriz</td>
           </tr>
           <tr>
@@ -120,7 +120,7 @@
             <td>DAW:2:B</td>
             <td>A05</td>
             <td>21/10 14:30</td>
-            <td><span class="status absent">Absent</span></td>
+            <td><span class="status absent">Ausente</span></td>
             <td>Gallardo, Manuel</td>
           </tr>
           <tr>
@@ -128,7 +128,7 @@
             <td>DAW:2:A</td>
             <td>A01</td>
             <td>18/10 15:30</td>
-            <td><span class="status absent">Absent</span></td>
+            <td><span class="status absent">Ausente</span></td>
             <td>Gallardo, Manuel</td>
           </tr>
           <tr>
@@ -136,7 +136,7 @@
             <td>DAW:2:B</td>
             <td>A02</td>
             <td>17/10 16:30</td>
-            <td><span class="status retard">Retard</span></td>
+            <td><span class="status retard">Retraso</span></td>
             <td>Leon, Cesar</td>
           </tr>
           <tr>
@@ -144,7 +144,15 @@
             <td>DAW:2:A</td>
             <td>A03</td>
             <td>17/10 16:30</td>
-            <td><span class="status retard">Retard</span></td>
+            <td><span class="status retard">Retraso</span></td>
+            <td>Leon, Cesar</td>
+          </tr>
+          <tr>
+            <td>Sanz, Pedro</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>17/10 16:30</td>
+            <td><span class="status retard">Retraso</span></td>
             <td>Leon, Cesar</td>
           </tr>
         </tbody>
@@ -157,16 +165,16 @@
   <div class="row">
 
     <div class="main">
-      <h2>Horari</h2>
+      <h2>Horario</h2>
       
       <table>
         <tr>
           <th>Hora</th>
-          <th>Dilluns</th>
-          <th>Dimarts</th>
-          <th>Dimecres</th>
-          <th>Dijous</th>
-          <th>Divendres</th>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miércoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
         </tr>
         <tr>
           <td>14:30 - 15:30</td>
@@ -194,11 +202,11 @@
         </tr>
         <tr>
           <td>17:30 - 18:00</td>
-          <td>Descans</td>
-          <td>Descans</td>
-          <td>Descans</td>
-          <td>Descans</td>
-          <td>Descans</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
+          <td>Descanso</td>
         </tr>
         <tr>
           <td>18:00 - 19:00</td>
@@ -232,77 +240,83 @@
   <div class="row">
 
     <div class="main">
-      <h2>Seguiment</h2>
+      <h2>Seguimiento</h2>
 
       <!-- Sección de filtros -->
-      <div class="filter-section">
-        <label for="filter-group">Grup:</label>
-        <input type="text" id="filter-group" placeholder="">
+      <div class="filter-section1">
+        <label for="filter-group1">Grupo:</label>
+        <input type="text" id="filter-group1" placeholder="">
 
-        <label for="filter-room">Aula:</label>
-        <input type="text" id="filter-room" placeholder="">
+        <label for="filter-room1">Aula:</label>
+        <input type="text" id="filter-room1" placeholder="">
 
-        <button onclick="applyFilters()">Aplicar filtres</button>
-        <button onclick="clearFilters()">Netejar filtres</button>
+        <button onclick="applyFiltersSe()">Aplicar filtros</button>
+        <button onclick="clearFiltersSe()">Limpiar filtres</button>
       </div>
 
-      <table class="attendance-table">
+      <table class="attendance-table1">
         <thead>
           <tr>
-            <th>Alumne</th>
-            <th>Grups</th>
+            <th>Alumno</th>
+            <th>Grupo</th>
             <th>Aula</th>
-            <th>% d'asistencia</th>
+            <th>% de asistencia</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Ulloa Flores, Enric</td>
-            <td>DAW:2:A</td>
-            <td>A01</td>
-            <td>88%</td>
-          </tr>
-          <tr>
-            <td>Gil, Alberto</td>
             <td>DAW:2:B</td>
             <td>A02</td>
             <td>88%</td>
           </tr>
           <tr>
-            <td>Soler, Raquel</td>
+            <td>Rojas, Olga</td>
             <td>DAW:2:A</td>
-            <td>A03</td>
-            <td>88%</td>
+            <td>A01</td>
+            <td>44%</td>
           </tr>
           <tr>
-            <td>Marin, Sofía</td>
+            <td>Santos, Inés</td>
             <td>DAW:2:B</td>
+            <td>A03</td>
+            <td>90%</td>
+          </tr>
+          <tr>
+            <td>Prieto, Felix</td>
+            <td>DAW:2:A</td>
             <td>A04</td>
-            <td>88%</td>
+            <td>78%</td>
           </tr>
           <tr>
-            <td>Muñoz, Laura</td>
-            <td>DAW:2:A</td>
+            <td>Cortes, Hugo</td>
+            <td>DAW:2:B</td>
             <td>A05</td>
-            <td>88%</td>
+            <td>89%</td>
           </tr>
           <tr>
-            <td>Fernandez, Lorena</td>
-            <td>DAW:2:B</td>
-            <td>A01</td>
-            <td>88%</td>
-          </tr>
-          <tr>
-            <td>Mendez, Lucia</td>
+            <td>Molina, David</td>
             <td>DAW:2:A</td>
-            <td>A02</td>
-            <td>88%</td>
+            <td>A01</td>
+            <td>90%</td>
           </tr>
           <tr>
-            <td>Sanz, Inmaculada</td>
+            <td>Cristina Iglesias, María</td>
             <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>80%</td>
+          </tr>
+          <tr>
+            <td>Soto, Francisco</td>
+            <td>DAW:2:A</td>
             <td>A03</td>
-            <td>88%</td>
+            <td>80%</td>
+          </tr>
+          <tr>
+            <td>Sanz, Pedro</td>
+            <td>DAW:2:B</td>
+            <td>A02</td>
+            <td>89%</td>
           </tr>
         </tbody>
       </table>
@@ -313,20 +327,20 @@
   <div class="row">
 
     <div class="main">
-      <h2>Dades personals</h2>
+      <h2>Datos personales</h2>
       <div class="data-card">
         <div class="profile-picture">
           <img src="imatge/iconoperfil.jpg" alt="Profile Picture">
         </div>
         <div class="info">
           <p><strong>Rol:</strong> Profesor</p>
-          <p><strong>Nom:</strong> Pedro Rodriguez Cruz</p>
-          <p><strong>Telefon:</strong> +34 343 323 312</p>
+          <p><strong>Nombre:</strong> Pedro Rodriguez Cruz</p>
+          <p><strong>Telefono:</strong> +34 343 323 312</p>
           <p><strong>Correo:</strong> pedro.rodriguez@iticbcn.cat</p>
           <p><strong>RFID:</strong> 32434563457</p>
         </div>
       </div>
-      <button class="logout" onclick="location.href='login.html'">Tanca sessió</button>
+      <button class="logout" onclick="location.href='login.html'">Cerrar sesión</button>
     </div>
   </div>
 
@@ -334,8 +348,87 @@
   <div class="row">
     
     <div class="main">
-      <h2>Llistat</h2>
+      <h2>Lista</h2>
+      <!-- Selección de Grupo y Aula -->
+      <div id="step-1">
+        <h2>Seleccione Grupo y Aula</h2>
+        <label for="grupo">Grupo:</label>
+        <select id="grupo">
+            <option value="DAW2A">DAW2A</option>
+            <option value="DAW2B">DAW2B</option>
+            <option value="DAM2A">DAM2A</option>
+        </select>
 
+        <label for="aula">Aula:</label>
+        <select id="aula">
+            <option value="Aula 1">A01</option>
+            <option value="Aula 2">A02</option>
+            <option value="Aula 3">A03</option>
+            <option value="Aula 4">A04</option>
+            <option value="Aula 5">A05</option><br>
+        </select>
+
+        <div class="buttons">
+            <button onclick="revisarLista()">Revisar</button>
+        </div>
+    </div>
+
+    <!-- Tabla de Asistencia -->
+    <div id="step-2" style="display: none;">
+        <h2>Lista de Estudiantes</h2>
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody id="student-list">
+                <!-- Los estudiantes se cargarán dinámicamente aquí -->
+            </tbody>
+        </table>
+        <div class="buttons">
+            <button onclick="confirmarAsistencia()">Confirmar</button>
+        </div>
+    </div>
+
+    <!-- Confirmación Final -->
+    <div id="step-3" style="display: none;">
+        <h2>Resumen de Asistencia</h2>
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Grupo</th>
+                    <th>Aula</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody id="final-list">
+                <!-- Resumen de asistencia -->
+            </tbody>
+        </table>
+        <div class="buttons">
+            <button onclick="reiniciar()">Volver al inicio</button>
+        </div>
+    </div>
+
+    <!-- Llistat Dinámico -->
+    <div id="llistat" style="display: none;">
+        <h2>Llistat de Asistencia</h2>
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="llistat-body">
+                <!-- Lista dinámica -->
+            </tbody>
+        </table>
+    </div>
     </div>
   </div>
 

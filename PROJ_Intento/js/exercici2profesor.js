@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function applyFilters() {
-    const groupInput = document.getElementById('filter-group').value.trim().toLowerCase();
-    const roomInput = document.getElementById('filter-room').value.trim().toLowerCase();
-    const rows = document.querySelectorAll('.attendance-table tbody tr');
+function applyFiltersSe() {
+    const groupInput = document.getElementById('filter-group1').value.trim().toLowerCase();
+    const roomInput = document.getElementById('filter-room1').value.trim().toLowerCase();
+    const rows = document.querySelectorAll('.attendance-table1 tbody tr');
 
     rows.forEach(row => {
       const group = row.cells[1].textContent.trim().toLowerCase();
@@ -68,10 +68,10 @@ function applyFilters() {
     });
   }
 
-  function clearFilters() {
-    document.getElementById('filter-group').value = '';
-    document.getElementById('filter-room').value = '';
-    const rows = document.querySelectorAll('.attendance-table tbody tr');
+  function clearFiltersSe() {
+    document.getElementById('filter-group1').value = '';
+    document.getElementById('filter-room1').value = '';
+    const rows = document.querySelectorAll('.attendance-table1 tbody tr');
 
     rows.forEach(row => {
       row.style.display = '';
